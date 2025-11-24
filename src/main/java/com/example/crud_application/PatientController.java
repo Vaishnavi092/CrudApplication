@@ -1,5 +1,4 @@
 package com.example.crud_application;
-import com.example.crud_application.model.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;  
@@ -16,7 +15,7 @@ public class PatientController{
         return repo.save(e);
     }
 
-    @GetMappping("/patients")
+    @GetMapping("/patients")
     public List<Patient> getAll(){
         return repo.findAll();  
     }
