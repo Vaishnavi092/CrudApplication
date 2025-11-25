@@ -25,3 +25,8 @@ jobs:
 
       - name: Build with Maven
         run: ./mvnw clean package
+      - name: Run Tests
+        run: ./mvnw test
+
+      - name: Package Application
+        run: ./mvnw package -DskipTests
